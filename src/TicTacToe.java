@@ -3,10 +3,9 @@ import java.util.Scanner;
 public class TicTacToe {
 
     private int[][] board;
-    private int playerTurn;
-    private String name1, name2;
+    private int     playerTurn;
+    private String  name1, name2;
     private Scanner s;
-    private boolean aiCanPlace;
 
     TicTacToe()
     {
@@ -15,7 +14,6 @@ public class TicTacToe {
         name1 = "Player1";
         name2 = "Player2";
         s = new Scanner(System.in);
-        aiCanPlace = false;
     }
 
     public void Play()
@@ -24,11 +22,11 @@ public class TicTacToe {
         {
             if(winner(2))
             {
-                System.out.println(name2 + " wins!");
+                System.out.println(getName2() + " wins!");
             }
             else if(winner(1))
             {
-                System.out.println(name1 + " wins!");
+                System.out.println(getName1() + " wins!");
             }
             else
             {
@@ -43,10 +41,11 @@ public class TicTacToe {
             else
             {
                 System.out.print("Row: ");
-                int row = s.nextInt();
+                int row = getS().nextInt();
                 System.out.print("Column: ");
-                int column = s.nextInt();
+                int column = getS().nextInt();
                 place(row, column);
+                switchPlayers();
                 System.out.println("===============");
             }
         }
@@ -58,11 +57,11 @@ public class TicTacToe {
         }
         else if(winner(2))
         {
-            System.out.println(name2 + " wins!");
+            System.out.println(getName2() + " wins!");
         }
         else if(winner(1))
         {
-            System.out.println(name1 + " wins!");
+            System.out.println(getName1() + " wins!");
         }
         else
         {
@@ -70,167 +69,10 @@ public class TicTacToe {
         }
     }
 
-    public void PlayAgainstAI()
-    {
-        name2 = "Computer";
-        while(!boardIsFull())
-        {
-            if(winner(2))
-            {
-                System.out.println(name2 + " wins!");
-            }
-            else if(winner(1))
-            {
-                System.out.println(name1 + " wins!");
-            }
-            else
-            {
-                displayPlayer();
-            }
-            System.out.println("===============");
-            displayBoard();
-            if(winner(1) || winner(2))
-            {
-                promptRestartAI();
-            }
-            else if(playerTurn == 1)
-            {
-                System.out.print("Row: ");
-                int row = s.nextInt();
-                System.out.print("Column: ");
-                int column = s.nextInt();
-                placeAI(row, column);
-                switchPlayers();
-                System.out.println("===============");
-                aiCanPlace = true;
-            }
-            else {
-                for (int r = 0; r < board.length; r++)
-                {
-                    for (int c = 0; c < board[r].length; c++)
-                    {
-                        if (board[r][c] == 0 && aiCanPlace)
-                        {
-                            if(((topMiddle(2) && topLeft(2))
-                                    || (topMiddle(1) && topLeft(1))
-                                    || (middleLeft(2) && bottomLeft(2))
-                                    || (middleLeft(1) && bottomLeft(1))
-                                    || (center(2) && bottomRight(2))
-                                    || (center(1) && bottomRight(1)))
-                                    && topLeft(0))
-                            {
-                                placeAI(1, 1);
-                            }
-                            else if(((topLeft(2) && bottomLeft(2))
-                                    || (topLeft(1) && bottomLeft(1))
-                                    || (center(2) && middleRight(2))
-                                    || (center(1) && middleRight(1)))
-                                    && middleLeft(0))
-                            {
-                                placeAI(2, 1);
-                            }
-                            else if(((topLeft(2) && middleLeft(2))
-                                    || (topLeft(1) && middleLeft(1))
-                                    || (bottomMiddle(2) && bottomRight(2))
-                                    || (bottomMiddle(1) && bottomRight(1))
-                                    || (topRight(2) && center(2))
-                                    || (topRight(1) && center(1)))
-                                    && bottomLeft(0))
-                            {
-                                placeAI(3, 1);
-                            }
-                            else if(((topLeft(2) && topRight(2))
-                                    || (topLeft(1) && topRight(1))
-                                    || (center(2) && bottomMiddle(2))
-                                    || (center(1) && bottomMiddle(1)))
-                                    && topMiddle(0))
-                            {
-                                placeAI(1, 2);
-                            }
-                            else if(((topLeft(2) && topMiddle(2))
-                                    || (topLeft(1) && topMiddle(1))
-                                    || (center(2) && bottomLeft(2))
-                                    || (center(1) && bottomLeft(1))
-                                    || (middleRight(2) && bottomRight(2))
-                                    || (middleRight(1) && bottomRight(1)))
-                                    && topRight(0))
-                            {
-                                placeAI(1, 3);
-                            }
-                            else if(((topLeft(2) && bottomRight(2))
-                                    || (topLeft(1) && bottomRight(1))
-                                    || (topRight(2) && bottomLeft(2))
-                                    || (topRight(1) && bottomLeft(1))
-                                    || (topMiddle(2) && bottomMiddle(2))
-                                    || (topMiddle(1) && bottomMiddle(1))
-                                    || (middleLeft(2) && middleRight(2))
-                                    || (middleLeft(1) && middleRight(1)))
-                                    && center(0))
-                            {
-                                placeAI(2, 2);
-                            }
-                            else if(((topRight(2) && bottomRight(2))
-                                    || (topRight(1) && bottomRight(1))
-                                    || (middleLeft(2) && center(2))
-                                    || (middleLeft(1) && center(1)))
-                                    && middleRight(0))
-                            {
-                                placeAI(2,3);
-                            }
-                            else if(((bottomLeft(2) && bottomRight(2))
-                                    || (bottomLeft(1) && bottomRight(1))
-                                    || (topMiddle(2) && center(2))
-                                    || (topMiddle(1) && center(1)))
-                                    && bottomMiddle(0))
-                            {
-                                placeAI(3,2);
-                            }
-                            else if(((topRight(2) && middleRight(2))
-                                    || (topRight(1) && middleRight(1))
-                                    || (bottomLeft(2) && bottomMiddle(2))
-                                    || (bottomLeft(1) && bottomMiddle(1))
-                                    || (topLeft(2) && center(2))
-                                    || (topLeft(1) && center(1)))
-                                    && bottomRight(0))
-                            {
-                                placeAI(3,3);
-                            }
-                            else
-                            {
-                                placeAI(r + 1, c + 1);
-                            }
-                            switchPlayers();
-                            aiCanPlace = false;
-                        }
-                    }
-                }
-                System.out.println("===============");
-            }
-        }
-        if(boardIsFull() && (!winner(1) || !winner(2)))
-        {
-            System.out.println("Tie.");
-            System.out.println("=====");
-            promptRestartAI();
-        }
-        else if(winner(2))
-        {
-            System.out.println(name2 + " wins!");
-        }
-        else if(winner(1))
-        {
-            System.out.println(name1 + " wins!");
-        }
-        else
-        {
-            promptRestartAI();
-        }
-    }
-
     public void promptRestart()
     {
         System.out.print("Type '1' to restart: ");
-        int restart = s.nextInt();
+        int restart = getS().nextInt();
         System.out.println("===============");
         if(restart == 1)
         {
@@ -243,31 +85,15 @@ public class TicTacToe {
         }
     }
 
-    public void promptRestartAI()
-    {
-        System.out.print("Type '1' to restart: ");
-        int restart = s.nextInt();
-        System.out.println("===============");
-        if(restart == 1)
-        {
-            TicTacToe t = new TicTacToe();
-            t.PlayAgainstAI();
-        }
-        else
-        {
-            System.exit(1);
-        }
-    }
-
     public void displayPlayer()
     {
-        if(playerTurn == 2)
+        if(getPlayerTurn() == 2)
         {
-            System.out.print(name2);
+            System.out.print(getName2());
         }
         else
         {
-            System.out.print(name1);
+            System.out.print(getName1());
         }
         System.out.print("'s Turn");
         System.out.println();
@@ -275,15 +101,15 @@ public class TicTacToe {
 
     public void displayBoard()
     {
-        for(int r = 0; r < board.length; r++)
+        for(int r = 0; r < getBoard().length; r++)
         {
-            for(int c = 0; c < board[r].length; c++)
+            for(int c = 0; c < getBoard()[r].length; c++)
             {
-                if(board[r][c] == 1)
+                if(getBoard()[r][c] == 1)
                 {
                     System.out.print(" X ");
                 }
-                else if(board[r][c] == 2)
+                else if(getBoard()[r][c] == 2)
                 {
                     System.out.print(" O ");
                 }
@@ -292,16 +118,16 @@ public class TicTacToe {
                     System.out.print("   ");
                 }
 
-                if(c != board.length-1)
+                if(c != getBoard().length-1)
                 {
                     System.out.print("|");
                 }
                 else
                 {
                     System.out.println();
-                    if(r != board.length-1)
+                    if(r != getBoard().length-1)
                     {
-                        for(int i = 0; i < board.length*4-1; i++)
+                        for(int i = 0; i < getBoard().length*4-1; i++)
                         {
                             System.out.print("-");
                         }
@@ -314,9 +140,9 @@ public class TicTacToe {
 
     public void place(int r, int c)
     {
-        if(this.board[r-1][c-1] == 0)
+        if(getBoard()[r-1][c-1] == 0)
         {
-            this.board[r-1][c-1] = playerTurn;
+            getBoard()[r-1][c-1] = getPlayerTurn();
         }
         else if(boardIsFull())
         {
@@ -331,28 +157,6 @@ public class TicTacToe {
             System.out.println("Space already filled. Try again.");
             System.out.println("================================");
             Play();
-        }
-    }
-
-    public void placeAI(int r, int c)
-    {
-        if(this.board[r-1][c-1] == 0)
-        {
-            this.board[r-1][c-1] = playerTurn;
-        }
-        else if(boardIsFull())
-        {
-            System.out.println("==============");
-            System.out.println("Board is full.");
-            System.out.println("==============");
-            PlayAgainstAI();
-        }
-        else
-        {
-            System.out.println("================================");
-            System.out.println("Space already filled. Try again.");
-            System.out.println("================================");
-            PlayAgainstAI();
         }
     }
 
@@ -360,20 +164,20 @@ public class TicTacToe {
     {
         if(playerTurn == 1)
         {
-            playerTurn = 2;
+            setPlayerTurn(2);
         }
         else
         {
-            playerTurn = 1;
+            setPlayerTurn(1);
         }
     }
 
     public boolean boardIsFull()
     {
         boolean boardIsFull = true;
-        for(int r = 0; r < board.length; r++)
+        for(int r = 0; r < getBoard().length; r++)
         {
-            for(int c = 0; c < board[r].length; c++)
+            for(int c = 0; c < getBoard()[r].length; c++)
             {
                 if(available(r, c))
                 {
@@ -387,13 +191,11 @@ public class TicTacToe {
     public boolean winner(int n)
     {
         boolean winner = false;
-        for(int r = 0; r < board.length; r++)
+        for(int r = 0; r < getBoard().length; r++)
         {
-            for (int c = 0; c < board[r].length; c++)
+            for (int c = 0; c < getBoard()[r].length; c++)
             {
-                if(winRow1(n) || winRow2(n) || winRow3(n)
-                        || winCol1(n) || winCol2(n) || winCol3(n)
-                        || winDiag1(n) || winDiag2(n))
+                if(winningConditions(n))
                 {
                     winner = true;
                 }
@@ -401,6 +203,8 @@ public class TicTacToe {
         }
         return winner;
     }
+
+    public boolean winningConditions(int n) { return winRow1(n) || winRow2(n) || winRow3(n) || winCol1(n) || winCol2(n) || winCol3(n) || winDiag1(n) || winDiag2(n);}
 
     public boolean available(int r, int c)
     {
@@ -491,4 +295,45 @@ public class TicTacToe {
     {
         return board[2][2] == n;
     }
+
+    public int[][] getBoard() {
+        return board;
+    }
+
+    public void setBoard(int[][] board) {
+        this.board = board;
+    }
+
+    public int getPlayerTurn() {
+        return playerTurn;
+    }
+
+    public void setPlayerTurn(int playerTurn) {
+        this.playerTurn = playerTurn;
+    }
+
+    public String getName1() {
+        return name1;
+    }
+
+    public void setName1(String name1) {
+        this.name1 = name1;
+    }
+
+    public String getName2() {
+        return name2;
+    }
+
+    public void setName2(String name2) {
+        this.name2 = name2;
+    }
+
+    public Scanner getS() {
+        return s;
+    }
+
+    public void setS(Scanner s) {
+        this.s = s;
+    }
+
 }
