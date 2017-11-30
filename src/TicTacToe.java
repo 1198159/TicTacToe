@@ -7,12 +7,20 @@ public class TicTacToe {
     private String  name1, name2;
     private Scanner s;
 
-    TicTacToe()
+    public TicTacToe()
     {
         board = new int[3][3];
         playerTurn = 1;
         name1 = "Player1";
         name2 = "Player2";
+        s = new Scanner(System.in);
+    }
+
+    public TicTacToe(String name1, String name2) {
+        board = new int[3][3];
+        playerTurn = 1;
+        this.name1 = name1;
+        this.name2 = name2;
         s = new Scanner(System.in);
     }
 
@@ -294,6 +302,84 @@ public class TicTacToe {
     public boolean bottomRight(int n)
     {
         return board[2][2] == n;
+    }
+
+    public boolean canWin(int n)
+    {
+        return  canWinTopLeft(n) || canWinTopMiddle(n) || canWinTopRight(n)
+                ||
+                canWinMiddleLeft(n) || canWinCenter(n) || canWinMiddleRight(n)
+                ||
+                canWinBottomLeft(n) || canWinBottomMiddle(n) || canWinBottomRight(n)
+                ;
+    }
+
+    public boolean canWinTopLeft(int n)
+    {
+        return (((topMiddle(n) && topLeft(n))
+                || (middleLeft(n) && bottomLeft(n))
+                || (center(n) && bottomRight(n)))
+                && topLeft(0));
+    }
+
+    public boolean canWinTopMiddle(int n)
+    {
+        return (((topLeft(n) && topRight(n))
+                || (center(n) && bottomMiddle(n)))
+                && topMiddle(0));
+    }
+
+    public boolean canWinTopRight(int n)
+    {
+        return (((topLeft(n) && topMiddle(n))
+                || (center(n) && bottomLeft(n))
+                || (middleRight(n) && bottomRight(n)))
+                && topRight(0));
+    }
+
+    public boolean canWinMiddleLeft(int n)
+    {
+        return (((topLeft(n) && bottomLeft(n))
+                || (center(n) && middleRight(n)))
+                && middleLeft(0));
+    }
+
+    public boolean canWinCenter(int n)
+    {
+        return (((topLeft(n) && bottomRight(n))
+                || (topRight(n) && bottomLeft(n))
+                || (topMiddle(n) && bottomMiddle(n))
+                || (middleLeft(n) && middleRight(n)))
+                && center(0));
+    }
+
+    public boolean canWinMiddleRight(int n)
+    {
+        return (((topRight(n) && bottomRight(n))
+                || (middleLeft(n) && center(n)))
+                && middleRight(0));
+    }
+
+    public boolean canWinBottomLeft(int n) {
+        return (((topLeft(n) && middleLeft(n))
+                || (bottomMiddle(n) && bottomRight(n))
+                || (topRight(n) && center(n)))
+                && bottomLeft(0));
+    }
+
+    public boolean canWinBottomMiddle(int n)
+    {
+        return (((bottomLeft(n) && bottomRight(n))
+                || (topMiddle(n) && center(n)))
+                && bottomMiddle(0));
+    }
+
+    public boolean canWinBottomRight(int n)
+    {
+        return (((topRight(n) && middleRight(n))
+                || (bottomLeft(n) && bottomMiddle(n))
+                || (topLeft(n) && center(n)))
+                && bottomRight(0));
     }
 
     public int[][] getBoard() {
