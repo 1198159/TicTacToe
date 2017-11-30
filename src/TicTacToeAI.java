@@ -15,6 +15,14 @@ public class TicTacToeAI extends TicTacToe{
         aiCanPlace = false;
     }
 
+    public boolean isAiCanPlace() {
+        return aiCanPlace;
+    }
+
+    public void setAiCanPlace(boolean aiCanPlace) {
+        this.aiCanPlace = aiCanPlace;
+    }
+
     public void Play()
     {
         setName2("Computer");
@@ -103,6 +111,7 @@ public class TicTacToeAI extends TicTacToe{
             promptRestart();
         }
     }
+
     public void place(int r, int c)
     {
         if(getBoard()[r-1][c-1] == 0)
