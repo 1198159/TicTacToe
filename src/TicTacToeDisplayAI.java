@@ -7,12 +7,15 @@ public class TicTacToeDisplayAI extends PApplet {
     // TEXT SIZE
     private float textSize = WIN_HEIGHT / 3;
 
+    // BACKGROUND COLOR
+    private float bgR = random(50,205), bgG = random(50,205), bgB = random(50,205);
+
     // STROKE PROPERTIES
     private float strokeWeight = 5;
-    private int   strokeR = 255, strokeG = 255, strokeB = 255;
+    private float strokeR = bgR*0.8f, strokeG = bgG*0.8f, strokeB = bgB*0.8f;
 
-    // BACKGROUND COLOR
-    private int bgR = 0, bgG = 0, bgB = 0;
+    // TEXT COLOR
+    private float tR = strokeR, tG = strokeG, tB = strokeB;
 
     // DECLARE TICTACTOE
     private TicTacToeAI t = new TicTacToeAI();
@@ -40,7 +43,7 @@ public class TicTacToeDisplayAI extends PApplet {
                 botLeftMarked = false, botMiddleMarked = false, botRightMarked = false;
 
     // DELAY BEFORE DISPLAYING RESULT
-    private int timer = 0, timeUp = 100;
+    private int timer = 0, timeUp = 50;
     private boolean resultDeclared = false, resultDisplayed = false;
 
     // MAIN
@@ -54,10 +57,11 @@ public class TicTacToeDisplayAI extends PApplet {
     }
 
     // SETUP - BACKGROUND COLOR & DIVIDERS
-    public void setup() { background(bgR, bgG, bgB); drawDividers(); }
+    public void setup() { background(bgR, bgG, bgB); drawDividers(); fill(tR,tG,tB);}
 
     // DRAW
     public void draw() {
+        cursor(HAND);
         if(!resultDeclared) {
             player = t.getPlayerTurn();
             if (player == 2 && t.isAiCanPlace()) { aiMove(); }
@@ -86,8 +90,9 @@ public class TicTacToeDisplayAI extends PApplet {
     public void displayWin(int n)
     {
         t.displayBoard();
+        fill(bgR,bgG,bgB);
         rect(0, 0, WIN_WIDTH, WIN_HEIGHT);
-        fill(0);
+        fill(tR,tG,tB);
         String text;
         if(n == 2) { text = t.getName2() + " Wins"; print(t.getName2() + " Wins");}
         else       { text = t.getName1() + " Wins"; print(t.getName1() + " Wins");}
@@ -103,8 +108,9 @@ public class TicTacToeDisplayAI extends PApplet {
     public void displayTie()
     {
         t.displayBoard();
+        fill(bgR,bgG,bgB);
         rect(0, 0, WIN_WIDTH, WIN_HEIGHT);
-        fill(0);
+        fill(tR,tG,tB);
         text("Tie", WIN_WIDTH / 3, WIN_HEIGHT / 2);
         print("Tie");
         resultDisplayed = true;
@@ -192,7 +198,10 @@ public class TicTacToeDisplayAI extends PApplet {
                 if(player == 1)
                 {
                     placeClick();
+                    pushStyle();
+                    fill(tB, tG, tR);
                     mark(1);
+                    popStyle();
                 }
             }
             else
