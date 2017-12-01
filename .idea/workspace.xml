@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22f2a991-bbe1-431d-aed5-cc41f19546c1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeAI.class" afterPath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeAI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeDisplayAI.class" afterPath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeDisplayAI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TicTacToeAI.java" afterPath="$PROJECT_DIR$/src/TicTacToeAI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TicTacToeDisplayAI.java" afterPath="$PROJECT_DIR$/src/TicTacToeDisplayAI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,7 +21,7 @@
       <file leaf-file-name="TicTacToe.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TicTacToe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
+            <state relative-caret-position="4347">
               <caret line="207" column="34" lean-forward="false" selection-start-line="207" selection-start-column="34" selection-end-line="207" selection-end-column="34" />
               <folding />
             </state>
@@ -27,13 +31,10 @@
       <file leaf-file-name="TicTacToeAI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TicTacToeAI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="24" lean-forward="true" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+            <state relative-caret-position="987">
+              <caret line="52" column="43" lean-forward="false" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
               <folding>
-                <element signature="e#378#379#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,8 +43,8 @@
       <file leaf-file-name="TicTacToeDisplayAI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TicTacToeDisplayAI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="267" column="9" lean-forward="true" selection-start-line="267" selection-start-column="9" selection-end-line="267" selection-end-column="9" />
+            <state relative-caret-position="399">
+              <caret line="59" column="104" lean-forward="false" selection-start-line="59" selection-start-column="104" selection-end-line="59" selection-end-column="104" />
               <folding />
             </state>
           </provider>
@@ -87,8 +88,8 @@
         <option value="$PROJECT_DIR$/src/TicTacToeMain.java" />
         <option value="$USER_HOME$/OneDrive - Tredyffrin Easttown School District/11th Grade/Eric APCS1718 Workspace/core_ver_3.0.jar!/processing/core/PApplet.class" />
         <option value="$PROJECT_DIR$/src/TicTacToe.java" />
-        <option value="$PROJECT_DIR$/src/TicTacToeAI.java" />
         <option value="$PROJECT_DIR$/src/TicTacToeDisplay.java" />
+        <option value="$PROJECT_DIR$/src/TicTacToeAI.java" />
         <option value="$PROJECT_DIR$/src/TicTacToeDisplayAI.java" />
       </list>
     </option>
@@ -117,10 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,6 +138,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,15 +340,14 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.325054" sideWeight="0.534375" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.325054" sideWeight="0.5385417" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.325054" sideWeight="0.465625" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.325054" sideWeight="0.46145833" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -359,6 +359,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -409,13 +410,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToeAI.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeDisplayAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2184">
+          <caret line="108" column="5" lean-forward="true" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4347">
+          <caret line="207" column="34" lean-forward="false" selection-start-line="207" selection-start-column="34" selection-end-line="207" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="24" lean-forward="true" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeDisplayAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5586">
+          <caret line="266" column="18" lean-forward="true" selection-start-line="266" selection-start-column="18" selection-end-line="266" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4347">
+          <caret line="207" column="34" lean-forward="false" selection-start-line="207" selection-start-column="34" selection-end-line="207" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeAI.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4200">
           <caret line="200" column="9" lean-forward="true" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
           <folding>
-            <element signature="e#378#379#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -460,47 +526,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicTacToeAI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="true" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding>
-            <element signature="e#378#379#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
+        <state relative-caret-position="4347">
           <caret line="207" column="34" lean-forward="false" selection-start-line="207" selection-start-column="34" selection-end-line="207" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicTacToeDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="111" lean-forward="true" selection-start-line="10" selection-start-column="111" selection-end-line="10" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeDisplay.java" />
     <entry file="jar://$USER_HOME$/OneDrive - Tredyffrin Easttown School District/11th Grade/Eric APCS1718 Workspace/core_ver_3.0.jar!/processing/core/PApplet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-371">
           <caret line="5557" column="5" lean-forward="true" selection-start-line="5557" selection-start-column="5" selection-end-line="5557" selection-end-column="5" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeAI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="52" column="43" lean-forward="false" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToeDisplayAI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="267" column="9" lean-forward="true" selection-start-line="267" selection-start-column="9" selection-end-line="267" selection-end-column="9" />
+        <state relative-caret-position="399">
+          <caret line="59" column="104" lean-forward="false" selection-start-line="59" selection-start-column="104" selection-end-line="59" selection-end-column="104" />
           <folding />
         </state>
       </provider>

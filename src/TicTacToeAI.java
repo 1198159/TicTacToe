@@ -10,7 +10,7 @@ public class TicTacToeAI extends TicTacToe{
         setBoard(new int[3][3]);
         setPlayerTurn(1);
         setName1("Player1");
-        setName2("Player2");
+        setName2("Computer");
         setS(new Scanner(System.in));
         aiCanPlace = false;
     }

@@ -2,7 +2,7 @@ import processing.core.PApplet;
 
 public class TicTacToeDisplayAI extends PApplet {
     // WINDOW DIMENSIONS
-    private int WIN_WIDTH = 1920, WIN_HEIGHT = 1080;
+    private int WIN_WIDTH = 1000, WIN_HEIGHT = WIN_WIDTH;
 
     // TEXT SIZE
     private float textSize = WIN_HEIGHT / 3;
@@ -26,12 +26,12 @@ public class TicTacToeDisplayAI extends PApplet {
 
     // DECLARE MARKER POSITIONS
     private float
-                leftX = leftDivX-textSize*1.25f,
-                midX = rightDivX-textSize*1.25f,
-                rightX = WIN_WIDTH-textSize*1.25f,
-                topY = topDivY-textSize/6,
-                midY = botDivY-textSize/6,
-                botY = WIN_HEIGHT-textSize/6;
+                leftX  = leftDivX-textSize/2,
+                midX   = rightDivX-textSize/2,
+                rightX = WIN_WIDTH-textSize/2,
+                topY   = topDivY-textSize/6,
+                midY   = botDivY-textSize/6,
+                botY   = WIN_HEIGHT-textSize/6;
 
     // DECLARE PLAYER
     private int player;
@@ -57,7 +57,7 @@ public class TicTacToeDisplayAI extends PApplet {
     }
 
     // SETUP - BACKGROUND COLOR & DIVIDERS
-    public void setup() { background(bgR, bgG, bgB); drawDividers(); fill(tR,tG,tB);}
+    public void setup() { background(bgR, bgG, bgB); drawDividers(); fill(tR,tG,tB); textAlign(CENTER); }
 
     // DRAW
     public void draw() {
@@ -96,8 +96,9 @@ public class TicTacToeDisplayAI extends PApplet {
         String text;
         if(n == 2) { text = t.getName2() + " Wins"; print(t.getName2() + " Wins");}
         else       { text = t.getName1() + " Wins"; print(t.getName1() + " Wins");}
-        textSize(textSize / text.length() * 10);
-        text(text, WIN_WIDTH / 4 - textSize * text.length() * 0.1f, WIN_HEIGHT / 4);
+        textSize(textSize / text.length() * 4);
+        textAlign(CENTER);
+        text(text, WIN_WIDTH / 2, WIN_HEIGHT / 2);
         resultDisplayed = true;
         stop();
     }
@@ -111,7 +112,10 @@ public class TicTacToeDisplayAI extends PApplet {
         fill(bgR,bgG,bgB);
         rect(0, 0, WIN_WIDTH, WIN_HEIGHT);
         fill(tR,tG,tB);
-        text("Tie", WIN_WIDTH / 3, WIN_HEIGHT / 2);
+        String text = "Tie";
+        textSize(textSize);
+        textAlign(CENTER);
+        text(text, WIN_WIDTH / 2, WIN_HEIGHT / 2);
         print("Tie");
         resultDisplayed = true;
         stop();
