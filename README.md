@@ -1,5 +1,7 @@
 # TicTacToe
-AP Computer Science assignment <br>
-Teacher - Mr. Sharick
 
-Cool Tic Tac Toe game I made for AP Computer Science. <br>
+## Teacher
+Mr. Sharick
+
+## Description
+Cool tic-tac-toe game I made for AP Computer Science A.
